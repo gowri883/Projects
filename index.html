@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- SEO [SEO] -->
+<title>Gowri R — Digital Marketing Portfolio</title>
+<meta name="description" content="Digital marketing portfolio of Gowri R — case studies in SME, SMO, SEO, GA4 and Meta Ads covering Gully Labs and Hipster The Salon, Bhandup West.">
+<meta name="keywords" content="Gowri R digital marketing, SME SMO SEO GA4 portfolio, Gully Labs case study, Hipster Salon Bhandup, marketing fresher portfolio Mumbai">
+<meta name="author" content="Gowri R">
+<meta property="og:title" content="Gowri R — Digital Marketing Portfolio">
+<meta property="og:description" content="Real-world case studies in SME, SMO, SEO, GA4 and Meta Ads.">
+<meta property="og:type" content="website">
+<!-- /SEO -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Instrument+Sans:wght@300;400;500;600&family=Fira+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ─── TOKENS ─────────────────────────────────── */
+:root {
+  --bg:#f8f5f0; --surface:#fff; --warm:#f2ece2;
+  --border:#e0d8cc; --border-lt:#eae3d8;
+  --text:#1a1612; --body:#48423b; --muted:#8a8078;
+  --accent:#b84c14;
+  --sme:#9c3510; --sme-bg:#fdf0eb; --sme-br:#edac90;
+  --smo:#1a5c3a; --smo-bg:#edf7f1; --smo-br:#96d8b2;
+  --g4:#1d4880;  --g4-bg:#ecf1fb;  --g4-br:#a0bfec;
+  --seo:#5c2d8e; --seo-bg:#f5effe; --seo-br:#c4a4ee;
+  --meta:#1877f2;--meta-bg:#eef4ff;--meta-br:#a8c8f8;
+  --r:10px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Instrument Sans',sans-serif;font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased;}
+h1,h2,h3{font-family:'Lora',serif;line-height:1.2;}
+h1{font-size:clamp(30px,5.5vw,56px);font-weight:700;}
+h2{font-size:clamp(20px,3.2vw,33px);font-weight:600;margin-bottom:26px;}
+h3{font-size:17px;font-weight:600;margin-bottom:10px;}
+p{color:var(--body);}
+code{font-family:'Fira Mono',monospace;font-size:11.5px;}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px;}
+section{padding:60px 0;}
+section+section{border-top:1px solid var(--border);}
+
+/* CHIPS */
+.chip{display:inline-flex;align-items:center;font-family:'Fira Mono',monospace;font-size:10px;letter-spacing:.4px;padding:2px 8px;border-radius:5px;vertical-align:middle;position:relative;top:-1px;border:1px solid;white-space:nowrap;}
+.chip-sme{background:var(--sme-bg);color:var(--sme);border-color:var(--sme-br);}
+.chip-smo{background:var(--smo-bg);color:var(--smo);border-color:var(--smo-br);}
+.chip-g4 {background:var(--g4-bg); color:var(--g4); border-color:var(--g4-br);}
+.chip-seo{background:var(--seo-bg);color:var(--seo);border-color:var(--seo-br);}
+.chip-meta{background:var(--meta-bg);color:var(--meta);border-color:var(--meta-br);}
+
+/* ─── NAV ────────────────────────────────────── */
+header{background:var(--surface);border-bottom:1px solid var(--border);padding:13px 0;position:sticky;top:0;z-index:200;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.nav-brand{font-family:'Lora',serif;font-size:14px;font-weight:600;color:var(--text);cursor:pointer;}
+.nav-brand span{color:var(--accent);}
+.nav-right{display:flex;align-items:center;gap:20px;}
+.nav-links{display:flex;gap:20px;list-style:none;}
+.nav-links a{font-size:11px;letter-spacing:.5px;color:var(--muted);text-transform:uppercase;transition:color .15s;cursor:pointer;}
+.nav-links a:hover,.nav-links a.anl{color:var(--accent);}
+@media(max-width:600px){.nav-links{display:none;}}
+
+/* ─── SWITCHER ───────────────────────────────── */
+.switcher-wrap{position:relative;}
+.switcher-btn{display:flex;align-items:center;gap:8px;background:var(--warm);border:1px solid var(--border);border-radius:8px;padding:7px 14px;cursor:pointer;font-size:12px;font-weight:500;color:var(--text);user-select:none;white-space:nowrap;transition:border-color .15s;}
+.switcher-btn:hover{border-color:var(--accent);}
+.switcher-btn .arr{font-size:10px;color:var(--muted);transition:transform .2s;}
+.switcher-btn.open .arr{transform:rotate(180deg);}
+.sw-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);}
+.switcher-dd{position:absolute;right:0;top:calc(100% + 8px);background:var(--surface);border:1px solid var(--border);border-radius:var(--r);box-shadow:0 8px 32px rgba(0,0,0,.10);min-width:270px;z-index:300;overflow:hidden;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;}
+.switcher-dd.open{opacity:1;pointer-events:all;transform:translateY(0);}
+.proj-opt{display:flex;align-items:center;gap:14px;padding:14px 18px;cursor:pointer;border-bottom:1px solid var(--border-lt);transition:background .12s;}
+.proj-opt:last-child{border:none;}
+.proj-opt:hover,.proj-opt.active{background:var(--warm);}
+.proj-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.proj-meta h4{font-size:13px;font-weight:600;color:var(--text);margin-bottom:2px;}
+.proj-meta p{font-size:11px;color:var(--muted);line-height:1.4;}
+.proj-meta .ptags{display:flex;gap:4px;margin-top:4px;flex-wrap:wrap;}
+
+/* PAGES */
+.page{display:none;} .page.active{display:block;}
+.overlay{position:fixed;inset:0;z-index:150;display:none;}
+.overlay.open{display:block;}
+
+/* ─── PORTFOLIO LANDING ──────────────────────── */
+.portfolio-hero{background:var(--surface);border-bottom:1px solid var(--border);padding:80px 0 64px;position:relative;overflow:hidden;}
+.portfolio-hero::before{content:'';position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:420px;height:420px;background:radial-gradient(circle,rgba(184,76,20,.06) 0%,transparent 70%);pointer-events:none;}
+.pfh-eyebrow{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:18px;}
+.pfh-name{font-family:'Lora',serif;font-size:clamp(38px,7vw,72px);font-weight:700;line-height:1.05;margin-bottom:14px;}
+.pfh-name em{font-style:italic;color:var(--accent);}
+.pfh-role{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:22px;}
+.pfh-desc{font-size:16px;color:var(--body);max-width:520px;font-weight:300;line-height:1.8;margin-bottom:36px;}
+.pfh-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:40px;}
+.pfh-pill{display:flex;align-items:center;gap:7px;padding:7px 16px;border-radius:100px;font-size:12px;font-weight:500;border:1px solid;}
+.pfh-pill.sme{background:var(--sme-bg);color:var(--sme);border-color:var(--sme-br);}
+.pfh-pill.smo{background:var(--smo-bg);color:var(--smo);border-color:var(--smo-br);}
+.pfh-pill.g4{background:var(--g4-bg);color:var(--g4);border-color:var(--g4-br);}
+.pfh-pill.seo{background:var(--seo-bg);color:var(--seo);border-color:var(--seo-br);}
+.pfh-pill.meta{background:var(--meta-bg);color:var(--meta);border-color:var(--meta-br);}
+.dot{width:6px;height:6px;border-radius:50%;}
+.dot.sme{background:var(--sme);}.dot.smo{background:var(--smo);}
+.dot.g4{background:var(--g4);}.dot.seo{background:var(--seo);}.dot.meta{background:var(--meta);}
+
+/* tag glossary on landing */
+.tag-glossary{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:48px;}
+.tg-cell{background:var(--surface);padding:18px 20px;}
+.tg-badge{font-family:'Fira Mono',monospace;font-size:10px;display:inline-block;padding:2px 9px;border-radius:5px;margin-bottom:7px;border:1px solid;font-weight:500;}
+.tg-cell .tg-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:3px;}
+.tg-cell .tg-desc{font-size:12px;color:var(--muted);line-height:1.55;}
+
+/* project cards */
+.project-cards{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+@media(max-width:680px){.project-cards{grid-template-columns:1fr;}}
+.pcard{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--surface);cursor:pointer;transition:box-shadow .18s,transform .18s;}
+.pcard:hover{box-shadow:0 8px 32px rgba(0,0,0,.09);transform:translateY(-2px);}
+.pcard-banner{height:170px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.pcard-body{padding:22px 24px;}
+.pcard-eyebrow{font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:7px;}
+.pcard-title{font-family:'Lora',serif;font-size:20px;font-weight:600;margin-bottom:6px;}
+.pcard-sub{font-size:12.5px;color:var(--muted);margin-bottom:14px;line-height:1.5;}
+.pcard-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
+.pcard-cta{font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.5px;display:flex;align-items:center;gap:6px;}
+
+/* sneaker SVG banner */
+.sneaker-banner{background:linear-gradient(135deg,#fdf0e8 0%,#f8e8d8 100%);position:relative;}
+.sneaker-banner svg{position:absolute;right:20px;bottom:0;opacity:.18;width:240px;}
+.sneaker-banner .bl{position:relative;z-index:2;padding:28px 32px;}
+.sneaker-banner .bl .big-emoji{font-size:56px;display:block;line-height:1;}
+.sneaker-banner .bl .tag-line{font-family:'Lora',serif;font-size:22px;font-weight:600;color:var(--text);margin-top:8px;line-height:1.2;}
+
+/* sole texture lines (CSS) */
+.sole-lines{position:absolute;left:0;top:0;width:100%;height:100%;overflow:hidden;pointer-events:none;}
+.sole-lines::before{content:'';position:absolute;bottom:-10px;left:-20px;width:200%;height:200%;background:repeating-linear-gradient(30deg,rgba(184,76,20,.04) 0px,rgba(184,76,20,.04) 2px,transparent 2px,transparent 18px);}
+
+/* salon banner */
+.salon-banner{background:linear-gradient(135deg,#edf7f1 0%,#d8f2e8 100%);}
+
+/* ─── CASE STUDY INNER STYLES ────────────────── */
+.hero{background:var(--surface);padding:68px 0 52px;border-bottom:1px solid var(--border);}
+.hero-ey{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:4px 14px;border-radius:100px;margin-bottom:22px;}
+.hero h1 em{font-style:italic;color:var(--accent);}
+.hero-sub{font-size:12px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin:9px 0 16px;}
+.hero-desc{font-size:16px;color:var(--body);max-width:600px;font-weight:300;line-height:1.75;margin-bottom:28px;}
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px;}
+.pill-lg{display:flex;align-items:center;gap:7px;padding:7px 15px;border-radius:100px;font-size:12px;font-weight:500;border:1px solid;}
+.pill-lg.sme{background:var(--sme-bg);color:var(--sme);border-color:var(--sme-br);}
+.pill-lg.smo{background:var(--smo-bg);color:var(--smo);border-color:var(--smo-br);}
+.pill-lg.g4{background:var(--g4-bg);color:var(--g4);border-color:var(--g4-br);}
+.pill-lg.seo{background:var(--seo-bg);color:var(--seo);border-color:var(--seo-br);}
+.pill-lg.meta{background:var(--meta-bg);color:var(--meta);border-color:var(--meta-br);}
+
+/* sneaker accent strip for gully page */
+.sneaker-strip{background:linear-gradient(90deg,#fdf0e8,#f8e8d8,#fdf0e8);border-bottom:1px solid var(--sme-br);padding:12px 0;overflow:hidden;white-space:nowrap;}
+.sneaker-strip-inner{display:inline-flex;gap:32px;animation:strip 20s linear infinite;}
+.sneaker-strip span{font-size:12px;font-weight:500;color:var(--sme);letter-spacing:1px;display:flex;align-items:center;gap:8px;}
+@keyframes strip{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* short def bar */
+.def-bar{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}
+.db-cell{background:var(--surface);padding:14px 18px;display:flex;flex-direction:column;gap:4px;}
+.db-badge{font-family:'Fira Mono',monospace;font-size:10px;display:inline-block;padding:2px 8px;border-radius:5px;border:1px solid;width:fit-content;}
+.db-name{font-size:12.5px;font-weight:600;color:var(--text);}
+.db-short{font-size:11.5px;color:var(--muted);line-height:1.45;}
+
+.sec-label{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+.divider{width:32px;height:3px;background:var(--accent);border-radius:2px;margin-bottom:22px;}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+@media(max-width:640px){.two-col{grid-template-columns:1fr;}}
+.info-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:24px;}
+.challenge-card{background:var(--warm);border:1px solid var(--border);border-radius:var(--r);padding:24px;}
+.info-card h3,.challenge-card h3{font-family:'Lora',serif;font-size:17px;}
+.info-rows{list-style:none;margin-top:4px;}
+.info-rows li{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:7px 0;border-bottom:1px solid var(--border-lt);font-size:13px;}
+.info-rows li:last-child{border:none;}
+.info-rows .k{color:var(--muted);flex-shrink:0;}.info-rows .v{font-weight:500;text-align:right;}
+.ch-list{list-style:none;margin-top:4px;}
+.ch-list li{font-size:13px;color:var(--body);padding:7px 0 7px 18px;position:relative;border-bottom:1px solid var(--border-lt);}
+.ch-list li:last-child{border:none;}
+.ch-list li::before{content:'—';position:absolute;left:0;color:var(--muted);}
+
+.timeline{position:relative;}
+.timeline::before{content:'';position:absolute;left:10px;top:8px;bottom:0;width:1px;background:var(--border);}
+.t-item{display:flex;gap:26px;margin-bottom:48px;}
+.t-dot{width:10px;height:10px;border-radius:50%;background:var(--surface);border:2px solid var(--accent);margin-top:6px;flex-shrink:0;}
+.t-right{flex:1;}
+.t-phase{font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
+.t-title{font-family:'Lora',serif;font-size:20px;font-weight:600;margin-bottom:8px;line-height:1.3;}
+.t-body{font-size:13.5px;color:var(--body);margin-bottom:16px;max-width:580px;}
+.tg{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.tc{padding:15px 17px;border-radius:var(--r);border:1px solid;}
+.tc h4{font-size:12.5px;font-weight:600;margin-bottom:5px;display:flex;align-items:center;gap:7px;flex-wrap:wrap;line-height:1.4;}
+.tc p{font-size:12px;color:var(--body);line-height:1.65;margin:0;}
+.tc.sme{background:var(--sme-bg);border-color:var(--sme-br);}.tc.sme h4{color:var(--sme);}
+.tc.smo{background:var(--smo-bg);border-color:var(--smo-br);}.tc.smo h4{color:var(--smo);}
+.tc.g4{background:var(--g4-bg);border-color:var(--g4-br);}.tc.g4 h4{color:var(--g4);}
+.tc.seo{background:var(--seo-bg);border-color:var(--seo-br);}.tc.seo h4{color:var(--seo);}
+.tc.meta{background:var(--meta-bg);border-color:var(--meta-br);}.tc.meta h4{color:var(--meta);}
+
+.mg{display:grid;grid-template-columns:repeat(auto-fill,minmax(162px,1fr));gap:13px;}
+.mc{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:20px 17px;}
+.mv{font-family:'Lora',serif;font-size:32px;font-weight:700;line-height:1;margin-bottom:5px;}
+.ml{font-size:12px;color:var(--muted);margin-bottom:7px;line-height:1.4;}
+.mn{font-size:11px;color:var(--muted);}
+
+.gg{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:640px){.gg{grid-template-columns:1fr;}}
+.gc{background:var(--g4-bg);border:1px solid var(--g4-br);border-radius:var(--r);padding:20px;}
+.gl{font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--g4);margin-bottom:7px;font-family:'Fira Mono',monospace;}
+.gc h3{color:var(--text);font-size:15px;margin-bottom:7px;}
+.gc p{font-size:12.5px;color:var(--body);}
+.mono-block{background:#eef2fa;border:1px solid var(--g4-br);border-radius:7px;padding:11px 13px;margin-top:10px;font-family:'Fira Mono',monospace;font-size:11px;color:#1e3c70;line-height:1.9;}
+
+.tw{overflow-x:auto;border:1px solid var(--border);border-radius:var(--r);}
+table{width:100%;border-collapse:collapse;font-size:13px;}
+thead{background:var(--warm);}
+th{text-align:left;padding:10px 14px;font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);font-weight:500;border-bottom:1px solid var(--border);}
+td{padding:11px 14px;border-bottom:1px solid var(--border-lt);vertical-align:middle;}
+tr:last-child td{border:none;}tr:hover td{background:var(--warm);}
+.kw{font-family:'Fira Mono',monospace;font-size:11.5px;color:var(--seo);}
+.vol{color:var(--muted);font-size:12px;}
+.br{display:inline-block;padding:2px 9px;border-radius:100px;font-size:10.5px;font-weight:600;}
+.rg{background:var(--smo-bg);color:var(--smo);border:1px solid var(--smo-br);}
+.rm{background:#fdf8ec;color:#7a5508;border:1px solid #e8d08a;}
+.rn{background:var(--warm);color:var(--muted);border:1px solid var(--border);}
+.tn{font-size:11.5px;color:var(--muted);}
+
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;}
+.pcard2{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}
+.pv{height:132px;display:flex;align-items:center;justify-content:center;font-size:44px;}
+.pb{padding:16px;}
+.pt{font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:7px;}
+.pc{font-size:13px;color:var(--body);line-height:1.6;margin-bottom:10px;}
+.ps{display:flex;gap:12px;font-size:11.5px;color:var(--muted);}
+.pn{font-size:11.5px;color:var(--muted);margin-top:8px;font-style:italic;line-height:1.5;}
+
+.hb{margin-top:20px;background:var(--smo-bg);border:1px solid var(--smo-br);border-radius:var(--r);padding:18px 20px;}
+.hl{font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--smo);margin-bottom:11px;font-family:'Fira Mono',monospace;}
+.hl2{display:flex;flex-wrap:wrap;gap:7px;}
+.hl2 span{background:var(--surface);color:var(--smo);border:1px solid var(--smo-br);padding:3px 11px;border-radius:100px;font-size:11.5px;font-family:'Fira Mono',monospace;}
+.hn{font-size:12px;color:var(--muted);margin-top:11px;line-height:1.6;}
+
+.tkg{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:13px;}
+.tkc{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:19px;}
+.tkc .num{font-family:'Lora',serif;font-size:26px;font-weight:700;color:var(--border);line-height:1;margin-bottom:7px;}
+.tkc h4{font-size:13px;font-weight:600;margin-bottom:5px;line-height:1.4;}
+.tkc p{font-size:12px;color:var(--muted);line-height:1.65;}
+
+.nb{background:var(--warm);border-left:3px solid var(--accent);padding:11px 16px;border-radius:0 var(--r) var(--r) 0;font-size:12px;color:var(--muted);margin-top:22px;line-height:1.65;}
+.nb strong{color:var(--body);}
+.pq{border-left:3px solid var(--accent);padding:13px 18px;margin:22px 0;background:var(--surface);border-radius:0 var(--r) var(--r) 0;}
+.pq p{font-family:'Lora',serif;font-size:15.5px;font-style:italic;color:var(--body);line-height:1.65;margin:0;}
+.pq cite{display:block;font-family:'Instrument Sans',sans-serif;font-size:11.5px;color:var(--muted);margin-top:7px;font-style:normal;}
+
+/* META ADS */
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:16px;margin-bottom:24px;}
+.mcrd{background:var(--meta-bg);border:1px solid var(--meta-br);border-radius:var(--r);padding:20px;}
+.mcrd .ml2{font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--meta);margin-bottom:8px;font-family:'Fira Mono',monospace;}
+.mcrd h3{color:var(--text);font-size:15px;margin-bottom:8px;}
+.mcrd p{font-size:12.5px;color:var(--body);}
+.ad-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(238px,1fr));gap:16px;margin-top:20px;}
+.am{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;font-size:13px;}
+.ami{height:132px;display:flex;align-items:center;justify-content:center;font-size:44px;}
+.amb{padding:14px 16px;}
+.amt{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+.amt .fd{width:28px;height:28px;border-radius:50%;background:#1877f2;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:700;flex-shrink:0;}
+.amt .ab{font-size:12.5px;font-weight:600;} .amt .asp{font-size:11px;color:var(--muted);}
+.ah{font-weight:600;font-size:13px;margin-bottom:4px;}
+.ab2{font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:10px;}
+.acta{display:inline-block;background:#1877f2;color:#fff;font-size:11.5px;font-weight:600;padding:6px 14px;border-radius:6px;}
+.at{font-size:10.5px;color:var(--muted);margin-top:8px;font-style:italic;}
+
+.mtb{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:20px;margin-top:16px;}
+.mtb .mtbl{font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;font-family:'Fira Mono',monospace;}
+.tr2{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
+.tr2:last-child{margin-bottom:0;}
+.tr2 .tk{font-family:'Fira Mono',monospace;font-size:11px;color:var(--seo);margin-bottom:2px;}
+.tr2 .tv{font-size:12.5px;color:var(--body);background:var(--warm);padding:7px 12px;border-radius:6px;border:1px solid var(--border-lt);line-height:1.5;}
+
+/* SEO meta tag display */
+.seo-tag-block{background:var(--seo-bg);border:1px solid var(--seo-br);border-radius:var(--r);padding:20px;margin-bottom:20px;}
+.stbl{font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--seo);margin-bottom:12px;font-family:'Fira Mono',monospace;}
+
+/* back btn */
+.back-btn{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:500;color:var(--muted);cursor:pointer;padding:6px 0;margin-bottom:4px;border:none;background:none;transition:color .15s;}
+.back-btn:hover{color:var(--accent);}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header>
+  <div class="wrap">
+    <div class="nav-inner">
+      <span class="nav-brand" onclick="goHome()">Gowri <span>R.</span></span>
+      <div class="nav-right">
+        <ul class="nav-links" id="sNav">
+          <li><a id="nl-brand" onclick="scrollTo2('sec-brand')">Brand</a></li>
+          <li><a id="nl-strat" onclick="scrollTo2('sec-strategy')">Strategy</a></li>
+          <li><a id="nl-res"   onclick="scrollTo2('sec-results')">Results</a></li>
+          <li><a id="nl-g4"    onclick="scrollTo2('sec-analytics')">GA4</a></li>
+          <li><a id="nl-seo"   onclick="scrollTo2('sec-seo')">SEO</a></li>
+        </ul>
+        <div class="switcher-wrap" id="swWrap">
+          <div class="switcher-btn" id="swBtn" onclick="toggleSw()">
+            <span class="sw-dot"></span>
+            <span id="swLabel">Portfolio</span>
+            <span class="arr">▾</span>
+          </div>
+          <div class="switcher-dd" id="swDd">
+            <div class="proj-opt" id="opt-home" onclick="switchPage('home')">
+              <div class="proj-icon" style="background:#f2ece2;">🏠</div>
+              <div class="proj-meta"><h4>Portfolio Home</h4><p>Gowri R — Overview &amp; about</p></div>
+            </div>
+            <div class="proj-opt" id="opt-gully" onclick="switchPage('gully')">
+              <div class="proj-icon" style="background:#fdf0eb;">👟</div>
+              <div class="proj-meta"><h4>Gully Labs</h4><p>D2C Premium Sneakers · Delhi NCR</p>
+                <div class="ptags"><span class="chip chip-sme">SME</span><span class="chip chip-smo">SMO</span><span class="chip chip-g4">GA4</span><span class="chip chip-seo">SEO</span></div>
+              </div>
+            </div>
+            <div class="proj-opt" id="opt-hipster" onclick="switchPage('hipster')">
+              <div class="proj-icon" style="background:#edf7f1;">✂️</div>
+              <div class="proj-meta"><h4>Hipster The Salon</h4><p>Unisex Salon · Bhandup West, Mumbai</p>
+                <div class="ptags"><span class="chip chip-seo">SEO</span><span class="chip chip-meta">Meta Ads</span><span class="chip chip-g4">GA4</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="overlay" id="overlay" onclick="closeSw()"></div>
+
+
+<!-- ════════════════════════
+     PAGE: HOME / PORTFOLIO
+════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- PORTFOLIO HERO -->
+  <div class="portfolio-hero">
+    <div class="wrap">
+      <p class="pfh-eyebrow">Digital Marketing Portfolio</p>
+      <h1 class="pfh-name">Gowri <em>R.</em></h1>
+      <p class="pfh-role">Aspiring Digital Marketer · Mumbai</p>
+      <p class="pfh-desc">I research real brands, build data-backed strategies, and present them as case studies — covering SME, SMO, SEO, GA4 and Meta Advertising. Below are two live projects I've documented in detail.</p>
+      <div class="pfh-tags">
+        <div class="pfh-pill sme"><span class="dot sme"></span>SME</div>
+        <div class="pfh-pill smo"><span class="dot smo"></span>SMO</div>
+        <div class="pfh-pill g4"><span class="dot g4"></span>GA4</div>
+        <div class="pfh-pill seo"><span class="dot seo"></span>SEO</div>
+        <div class="pfh-pill meta"><span class="dot meta"></span>Meta Ads</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAG GLOSSARY -->
+  <section style="padding:36px 0;background:var(--surface);border-bottom:1px solid var(--border);">
+    <div class="wrap">
+      <p class="sec-label" style="margin-bottom:14px;">What each tag means — in plain English</p>
+      <div class="tag-glossary">
+        <div class="tg-cell">
+          <span class="tg-badge chip-sme">SME</span>
+          <div class="tg-title">Social Media Engagement</div>
+          <div class="tg-desc">Getting people to interact — comments, shares, saves, DMs. Makes followers feel part of the brand.</div>
+        </div>
+        <div class="tg-cell">
+          <span class="tg-badge chip-smo">SMO</span>
+          <div class="tg-title">Social Media Optimisation</div>
+          <div class="tg-desc">Setting up profiles, hashtags and posting times so the algorithm shows your content to new people.</div>
+        </div>
+        <div class="tg-cell">
+          <span class="tg-badge chip-g4">GA4</span>
+          <div class="tg-title">Google Analytics 4</div>
+          <div class="tg-desc">Tracking what users do on a website — which ad sent them, where they dropped off, who converted.</div>
+        </div>
+        <div class="tg-cell">
+          <span class="tg-badge chip-seo">SEO</span>
+          <div class="tg-title">Search Engine Optimisation</div>
+          <div class="tg-desc">Making a brand rank higher on Google — through keywords, reviews, backlinks and Google Business Profile.</div>
+        </div>
+        <div class="tg-cell">
+          <span class="tg-badge chip-meta">Meta Ads</span>
+          <div class="tg-title">Meta Advertising</div>
+          <div class="tg-desc">Paid ads on Facebook and Instagram — targeted by location, age, interests and custom audience lists.</div>
+        </div>
+      </div>
+
+      <!-- PROJECT CARDS -->
+      <p class="sec-label" style="margin-bottom:14px;">Case Studies</p>
+      <div class="project-cards">
+
+        <!-- GULLY LABS CARD -->
+        <div class="pcard" onclick="switchPage('gully')">
+          <div class="pcard-banner sneaker-banner">
+            <div class="sole-lines"></div>
+            <!-- Sneaker SVG outline -->
+            <svg viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 110 Q40 60 100 50 L200 45 Q250 44 270 70 L280 95 Q285 108 260 112 L40 118 Q22 118 20 110Z" stroke="#b84c14" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path d="M100 50 L105 30 Q108 18 120 16 L170 14 Q182 14 185 26 L188 45" stroke="#b84c14" stroke-width="3" fill="none"/>
+              <path d="M110 80 L220 76" stroke="#b84c14" stroke-width="2" stroke-dasharray="6,4"/>
+              <path d="M108 92 L225 88" stroke="#b84c14" stroke-width="2" stroke-dasharray="6,4"/>
+              <circle cx="145" cy="62" r="4" fill="#b84c14" opacity=".6"/>
+              <circle cx="158" cy="60" r="4" fill="#b84c14" opacity=".6"/>
+              <circle cx="171" cy="59" r="4" fill="#b84c14" opacity=".6"/>
+            </svg>
+            <div class="bl">
+              <span class="big-emoji">👟</span>
+              <div class="tag-line">Gully Labs<br>D2C Sneaker Brand</div>
+            </div>
+          </div>
+          <div class="pcard-body">
+            <div class="pcard-eyebrow">Case Study 01 · Delhi NCR</div>
+            <div class="pcard-title">Gully Labs</div>
+            <div class="pcard-sub">How India's most-talked-about homegrown sneaker brand grew from zero to ₹30 Cr Series A using culture-first marketing.</div>
+            <div class="pcard-tags">
+              <span class="chip chip-sme">SME</span>
+              <span class="chip chip-smo">SMO</span>
+              <span class="chip chip-g4">GA4</span>
+              <span class="chip chip-seo">SEO</span>
+            </div>
+            <div class="pcard-cta">Open case study →</div>
+          </div>
+        </div>
+
+        <!-- HIPSTER CARD -->
+        <div class="pcard" onclick="switchPage('hipster')">
+          <div class="pcard-banner salon-banner" style="align-items:center;justify-content:center;flex-direction:column;gap:10px;">
+            <div style="font-size:52px;">✂️</div>
+            <div style="font-family:'Lora',serif;font-size:20px;font-weight:600;color:#1a5c3a;line-height:1.2;text-align:center;">Hipster The Salon<br><span style="font-size:14px;font-weight:400;color:var(--muted);">Bhandup West, Mumbai</span></div>
+          </div>
+          <div class="pcard-body">
+            <div class="pcard-eyebrow">Case Study 02 · Local Business</div>
+            <div class="pcard-title">Hipster The Salon</div>
+            <div class="pcard-sub">60-day local digital sprint for a Bhandup West salon — SEO, Meta Ads, GMB and GA4 tracking to drive measurable footfall.</div>
+            <div class="pcard-tags">
+              <span class="chip chip-seo">SEO</span>
+              <span class="chip chip-meta">Meta Ads</span>
+              <span class="chip chip-g4">GA4</span>
+              <span class="chip chip-smo">SMO</span>
+            </div>
+            <div class="pcard-cta">Open case study →</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-home -->
+
+
+<!-- ════════════════════════
+     PAGE: GULLY LABS
+════════════════════════ -->
+<div class="page" id="page-gully">
+
+  <!-- sneaker scrolling strip -->
+  <div class="sneaker-strip">
+    <div class="sneaker-strip-inner">
+      <span>👟 GULLY LABS</span><span>✦ MADE IN INDIA</span><span>👟 COLD FERMENT CULTURE</span><span>✦ DESI STREETWEAR</span><span>👟 SHARK TANK INDIA</span><span>✦ ₹30 CR SERIES A</span><span>👟 ROYAL ENFIELD COLLAB</span><span>✦ HOCKEY DROP</span>
+      <span>👟 GULLY LABS</span><span>✦ MADE IN INDIA</span><span>👟 COLD FERMENT CULTURE</span><span>✦ DESI STREETWEAR</span><span>👟 SHARK TANK INDIA</span><span>✦ ₹30 CR SERIES A</span><span>👟 ROYAL ENFIELD COLLAB</span><span>✦ HOCKEY DROP</span>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="wrap">
+      <button class="back-btn" onclick="goHome()">← Back to portfolio</button>
+      <div class="hero-ey"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block;"></span>Case Study 01 · D2C Brand</div>
+      <h1>How <em>Gully Labs</em> rewrote<br>India's premium brand playbook</h1>
+      <p class="hero-sub">Delhi NCR · Founded August 2023 · ₹30 Cr Series A (Jan 2026)</p>
+      <p class="hero-desc">Gully Labs built a cultural movement using community-first content, earned SEO and GA4-led decisions — from a zero-follower Instagram page to India's most talked-about homegrown sneaker brand.</p>
+      <div class="hero-pills">
+        <div class="pill-lg sme"><span class="dot sme"></span>SME</div>
+        <div class="pill-lg smo"><span class="dot smo"></span>SMO</div>
+        <div class="pill-lg g4"><span class="dot g4"></span>GA4</div>
+        <div class="pill-lg seo"><span class="dot seo"></span>SEO</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHORT DEF BAR -->
+  <section style="padding:28px 0;background:var(--surface);border-bottom:1px solid var(--border);">
+    <div class="wrap">
+      <div class="def-bar">
+        <div class="db-cell"><span class="db-badge chip-sme">SME</span><div class="db-name">Social Media Engagement</div><div class="db-short">Getting people to interact — comments, shares, saves, DMs.</div></div>
+        <div class="db-cell"><span class="db-badge chip-smo">SMO</span><div class="db-name">Social Media Optimisation</div><div class="db-short">Structuring content so the algorithm reaches new audiences.</div></div>
+        <div class="db-cell"><span class="db-badge chip-g4">GA4</span><div class="db-name">Google Analytics 4</div><div class="db-short">Tracking what users do — which ad sent them, where they dropped off.</div></div>
+        <div class="db-cell"><span class="db-badge chip-seo">SEO</span><div class="db-name">Search Engine Optimisation</div><div class="db-short">Ranking higher on Google via keywords, reviews and backlinks.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 BRAND -->
+  <section id="sec-brand">
+    <div class="wrap">
+      <p class="sec-label">01 — The Brand</p><div class="divider"></div>
+      <h2>About Gully Labs</h2>
+      <div class="two-col">
+        <div class="info-card">
+          <h3>Brand overview</h3>
+          <ul class="info-rows">
+            <li><span class="k">Founded</span><span class="v">August 2023, Delhi NCR</span></li>
+            <li><span class="k">Founders</span><span class="v">Arjun Singh &amp; Animesh Mishra</span></li>
+            <li><span class="k">Category</span><span class="v">Premium sneakers + Indian streetwear</span></li>
+            <li><span class="k">Factory</span><span class="v">In-house, 10,000 sq ft, Noida</span></li>
+            <li><span class="k">Price</span><span class="v">₹4,000–₹12,000 per pair</span></li>
+            <li><span class="k">Revenue</span><span class="v">65% India · 35% US, UK, UAE, Canada</span></li>
+            <li><span class="k">Funding</span><span class="v">₹30 Cr Series A — Saama Capital</span></li>
+            <li><span class="k">Valuation</span><span class="v">~₹147 Cr post-money</span></li>
+            <li><span class="k">Retail</span><span class="v">D2C + Extra Butter, Broadway, AJIO, Myntra</span></li>
+          </ul>
+        </div>
+        <div class="challenge-card">
+          <h3>The starting point (2023)</h3>
+          <ul class="ch-list">
+            <li>Zero followers — started as "Badass Indians" on Instagram</li>
+            <li>No recognition vs Nike, Puma, Adidas</li>
+            <li>Indian premium sneakers seen as a contradiction</li>
+            <li>No Indian cultural design language in footwear</li>
+            <li>Manufacturing from scratch: 6 karigars, 1,000 sq ft workshop</li>
+            <li>Had to educate the market on why a sneaker is worth ₹8,000</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pq"><p>"We are not building an Indian brand that looks West for validation. We want to be the Indian brand the world looks to."</p><cite>— Arjun Singh, Co-founder, Gully Labs</cite></div>
+    </div>
+  </section>
+
+  <!-- 02 STRATEGY -->
+  <section id="sec-strategy" style="background:var(--surface);">
+    <div class="wrap">
+      <p class="sec-label">02 — Strategy</p><div class="divider"></div>
+      <h2>How they built the playbook</h2>
+      <div class="timeline">
+
+        <div class="t-item"><div class="t-dot"></div><div class="t-right">
+          <div class="t-phase">Before launch · 6 months pre-product</div>
+          <div class="t-title">Community before product &nbsp;<span class="chip chip-sme">SME</span> <span class="chip chip-smo">SMO</span></div>
+          <p class="t-body">6 months building an audience before manufacturing a single pair. Product direction was shaped by community input.</p>
+          <div class="tg">
+            <div class="tc smo"><h4>Content-first Instagram <span class="chip chip-smo">SMO</span></h4><p>"Badass Indians" — celebrating under-the-radar Indian stories before any product existed. Profile optimised around cultural keywords.</p></div>
+            <div class="tc sme"><h4>Community feedback loops <span class="chip chip-sme">SME</span></h4><p>Founders posted manifestos, asked questions, ran polls. First buyers became co-creators. Product shaped by the people who'd buy it.</p></div>
+            <div class="tc seo"><h4>Manifesto SEO content <span class="chip chip-seo">SEO</span></h4><p>Long-form content on India's invisibility in global sneaker culture indexed early. Targeted "Indian streetwear" and "desi sneaker brand" keywords.</p></div>
+            <div class="tc g4"><h4>Pre-launch tracking <span class="chip chip-g4">GA4</span></h4><p>GA4 on a pre-launch page. Events tracked: email sign-ups, "Notify Me" clicks. Gave demand evidence before production decisions.</p></div>
+          </div>
+        </div></div>
+
+        <div class="t-item"><div class="t-dot"></div><div class="t-right">
+          <div class="t-phase">Launch · Diwali drop framing</div>
+          <div class="t-title">Don't launch a product — tell a story &nbsp;<span class="chip chip-sme">SME</span> <span class="chip chip-smo">SMO</span></div>
+          <p class="t-body">Debut collection framed as a Diwali story. Every element referenced Indian culture. Vogue feature and a viral Reel came within the first few months.</p>
+          <div class="tg">
+            <div class="tc smo"><h4>Cultural narrative Reels <span class="chip chip-smo">SMO</span></h4><p>Reels as stories: karigar craft, symbolism behind motifs, the meaning of "Gully." One went viral — tracked via GA4 UTM links to a D2C traffic spike.</p></div>
+            <div class="tc sme"><h4>Vogue India feature <span class="chip chip-sme">SME</span></h4><p>Landed Vogue India through a genuine cultural authenticity pitch — not paid placement. Community reshared widely, generating thousands of organic mentions.</p></div>
+            <div class="tc seo"><h4>Drop pages as editorial <span class="chip chip-seo">SEO</span></h4><p>Each drop had a story page, not just a listing. Diwali launch included cultural context, design notes and karigar profiles — ranked for long-tail keywords months later.</p></div>
+            <div class="tc sme"><h4>Founder-led content <span class="chip chip-sme">SME</span></h4><p>Arjun's posts about 6 months of research and failed prototypes drove massive DM volume and press inbound from Inc42, GQ and others.</p></div>
+          </div>
+        </div></div>
+
+        <div class="t-item"><div class="t-dot"></div><div class="t-right">
+          <div class="t-phase">Growth · Collabs &amp; cultural drops</div>
+          <div class="t-title">Strategic collabs as earned media &nbsp;<span class="chip chip-sme">SME</span> <span class="chip chip-seo">SEO</span></div>
+          <p class="t-body">Royal Enfield, CMF by Nothing, Tata Sierra, Bombay Sweet Shop — all chosen for cultural values, not budget. Each created its own content cycle and backlink stream.</p>
+          <div class="tg">
+            <div class="tc sme"><h4>Hockey Drop <span class="chip chip-sme">SME</span></h4><p>Sneaker honoring India's Olympic Hockey medals — athletes most brands ignored. 2-minute video described as "pure emotion." Zero paid spend.</p></div>
+            <div class="tc sme"><h4>Royal Enfield collab <span class="chip chip-sme">SME</span></h4><p>Motorcycling heritage meets streetwear. Sold out. Multiple publication coverage. Reached both the moto and sneaker communities in one drop.</p></div>
+            <div class="tc seo"><h4>Collab-driven backlinks <span class="chip chip-seo">SEO</span></h4><p>Each collab generated press: Indian Retailer, Inc42, GQ, Vogue, Fibre2Fashion — high-authority backlinks that paid ads can't replicate.</p></div>
+            <div class="tc g4"><h4>Per-drop GA4 funnels <span class="chip chip-g4">GA4</span></h4><p>Each drop had its own event stream: content_view → product_page → add_to_cart → purchase. UTMs tracked which media drove actual conversions vs only awareness.</p></div>
+          </div>
+        </div></div>
+
+        <div class="t-item"><div class="t-dot"></div><div class="t-right">
+          <div class="t-phase">Scale · Shark Tank + Series A</div>
+          <div class="t-title">Data-led omnichannel expansion &nbsp;<span class="chip chip-g4">GA4</span> <span class="chip chip-seo">SEO</span></div>
+          <p class="t-body">Shark Tank India S5 — ₹1 Cr from Aman Gupta at ₹175 Cr valuation. GA4 audience geography guided which cities got offline stores first.</p>
+          <div class="tg">
+            <div class="tc g4"><h4>GA4-guided offline expansion <span class="chip chip-g4">GA4</span></h4><p>GA4 audience reports showed highest repeat purchase from Delhi NCR, Bengaluru and Hyderabad. Offline footprint followed data: Panchsheel flagship, Extra Butter, Broadway.</p></div>
+            <div class="tc seo"><h4>Marketplace SEO <span class="chip chip-seo">SEO</span></h4><p>Myntra and AJIO listings optimised with cultural keywords and story-led descriptions — not generic spec sheets. Drove organic discovery within marketplace search.</p></div>
+            <div class="tc smo"><h4>Shark Tank amplification <span class="chip chip-smo">SMO</span></h4><p>Pitch clip posted to Instagram with cultural context. Follower growth spiked in 48 hours. Bio link updated to D2C store with GA4 UTM tracking.</p></div>
+            <div class="tc sme"><h4>WhatsApp drops community <span class="chip chip-sme">SME</span></h4><p>Core buyers added to private WhatsApp broadcast. New drops announced here first — insider early access built genuine loyalty and organic word-of-mouth.</p></div>
+          </div>
+        </div></div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 RESULTS -->
+  <section id="sec-results">
+    <div class="wrap">
+      <p class="sec-label">03 — Results</p><div class="divider"></div>
+      <h2>Where the brand stands today</h2>
+      <div class="mg">
+        <div class="mc"><div class="mv" style="color:var(--accent)">₹30 Cr</div><div class="ml">Series A raised Jan 2026</div><div class="mn">Led by Saama Capital</div></div>
+        <div class="mc"><div class="mv" style="color:var(--seo)">₹147 Cr</div><div class="ml">Post-money valuation</div><div class="mn">From ₹120 Cr at seed</div></div>
+        <div class="mc"><div class="mv" style="color:var(--sme)">35%</div><div class="ml">Revenue from US, UK, UAE, Canada</div><div class="mn"><span class="chip chip-smo">SMO</span> global community</div></div>
+        <div class="mc"><div class="mv" style="color:var(--smo)">50+</div><div class="ml">Active SKUs · 1 drop/month</div><div class="mn"><span class="chip chip-sme">SME</span> community-guided</div></div>
+        <div class="mc"><div class="mv" style="color:var(--g4)">150</div><div class="ml">Employees (100 artisans)</div><div class="mn">From 6 karigars in 2023</div></div>
+        <div class="mc"><div class="mv" style="color:var(--seo)">GQ</div><div class="ml">Most Influential Young Indians</div><div class="mn"><span class="chip chip-seo">SEO</span> earned media</div></div>
+        <div class="mc"><div class="mv" style="color:var(--sme)">₹1 Cr</div><div class="ml">Shark Tank deal · Aman Gupta</div><div class="mn">₹175 Cr valuation on air</div></div>
+        <div class="mc"><div class="mv" style="color:var(--smo)">Viral</div><div class="ml">First Reel in month 3</div><div class="mn"><span class="chip chip-smo">SMO</span> organic, no paid</div></div>
+      </div>
+      <div class="nb"><strong>Source:</strong> Inc42 (Jan 2026), Indian Retailer, Shark Tank India S5, Stride Ventures portfolio, Fibre2Fashion interview.</div>
+    </div>
+  </section>
+
+  <!-- 04 GA4 -->
+  <section id="sec-analytics" style="background:var(--surface);">
+    <div class="wrap">
+      <p class="sec-label">04 — GA4 &nbsp;<span class="chip chip-g4">GA4</span></p><div class="divider"></div>
+      <h2>How GA4 shaped their decisions</h2>
+      <div class="gg">
+        <div class="gc"><div class="gl">D2C funnel tracking</div><h3>Mapping content to purchase</h3><p>Each Reel linked with UTM params. Every sale traced back to its originating content piece.</p><div class="mono-block">content_view → utm_campaign:'hockey_drop'<br>product_page → item:'gly_001_olive'<br>add_to_cart → source:'ig_reel'<br>purchase → revenue: attributed<br>repeat_visit → segment:'loyalist'</div></div>
+        <div class="gc"><div class="gl">Offline expansion logic</div><h3>GA4 told them where to open stores</h3><p>Before the Panchsheel flagship, audience location reports showed highest repeat purchase rates by city. Data — not instinct — decided the offline footprint.</p><div class="mono-block">Delhi NCR    → highest repeat purchase<br>Bengaluru    → highest avg. order value<br>Hyderabad    → fastest growing sessions<br>International→ 35% of total revenue</div></div>
+        <div class="gc"><div class="gl">Collab attribution</div><h3>Which collab drove sales</h3><p>Every brand partnership had unique UTM campaign tags. GA4 compared press-driven vs creator-driven vs direct search — and identified what actually converted.</p><div class="mono-block">utm_campaign=royal_enfield_drop<br>utm_campaign=hockey_drop_reel<br>utm_campaign=shark_tank_episode<br>utm_campaign=cmf_nothing_launch</div></div>
+        <div class="gc"><div class="gl">LTV cohort analysis</div><h3>Story-first buyers = higher LTV</h3><p>GA4 cohorts proved buyers who entered via cultural story content had significantly higher lifetime value than discount-driven channels — validating the no-discount model to investors.</p><div class="mono-block">Story-first traffic → higher LTV<br>Discount traffic   → lower repeat rate<br>Mobile sessions    → 88% of traffic<br>Top age segment    → 22–32 years</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 SEO -->
+  <section id="sec-seo">
+    <div class="wrap">
+      <p class="sec-label">05 — SEO &nbsp;<span class="chip chip-seo">SEO</span></p><div class="divider"></div>
+      <h2>Keyword rankings</h2>
+      <div class="tw">
+        <table>
+          <thead><tr><th>Keyword</th><th>Monthly searches</th><th>Status</th><th>Tactic</th></tr></thead>
+          <tbody>
+            <tr><td><span class="kw">gully labs sneakers</span></td><td><span class="vol">~2,400/mo</span></td><td><span class="br rg">Brand #1</span></td><td><span class="tn">Shark Tank + GQ press <span class="chip chip-seo">SEO</span></span></td></tr>
+            <tr><td><span class="kw">Indian sneaker brand</span></td><td><span class="vol">~6,600/mo</span></td><td><span class="br rg">Top 3</span></td><td><span class="tn">Inc42, Vogue, GQ backlinks <span class="chip chip-seo">SEO</span></span></td></tr>
+            <tr><td><span class="kw">desi sneaker brand India</span></td><td><span class="vol">~1,200/mo</span></td><td><span class="br rg">#1 organic</span></td><td><span class="tn">Pre-launch manifesto page <span class="chip chip-seo">SEO</span></span></td></tr>
+            <tr><td><span class="kw">handcrafted sneakers India</span></td><td><span class="vol">~880/mo</span></td><td><span class="br rg">#2 organic</span></td><td><span class="tn">Karigar story pages + schema <span class="chip chip-seo">SEO</span></span></td></tr>
+            <tr><td><span class="kw">Indian streetwear brand</span></td><td><span class="vol">~8,100/mo</span></td><td><span class="br rm">Top 10</span></td><td><span class="tn">Editorial drop pages + collabs <span class="chip chip-seo">SEO</span></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 CONTENT -->
+  <section style="background:var(--surface);">
+    <div class="wrap">
+      <p class="sec-label">06 — Content &nbsp;<span class="chip chip-smo">SMO</span> <span class="chip chip-sme">SME</span></p><div class="divider"></div>
+      <h2>Content that built the brand</h2>
+      <div class="pg">
+        <div class="pcard2"><div class="pv" style="background:#fdf0e8;">🏒</div><div class="pb"><div class="pt"><span class="chip chip-sme">SME</span> Reel</div><p class="pc">"Two minutes and four seconds of pure emotions." — The Hockey Drop. Celebrated India's Olympic Hockey medals for a team most brands ignored.</p><div class="ps"><span>🔥 Viral</span><span>💬 High comments</span><span>📤 Widely shared</span></div><p class="pn">Zero paid spend. Reached both sneaker and sports communities. <span class="chip chip-sme">SME</span></p></div></div>
+        <div class="pcard2"><div class="pv" style="background:#edf7f2;">🏍️</div><div class="pb"><div class="pt"><span class="chip chip-smo">SMO</span> Collab Drop</div><p class="pc">Royal Enfield x Gully Labs — motorcycling heritage meets Indian streetwear. Sold out. Multiple publication coverage generating backlinks simultaneously.</p><div class="ps"><span>✅ Sold out</span><span>📰 Press</span><span>🔖 High saves</span></div><p class="pn">One collab = new audience + SEO backlinks. <span class="chip chip-smo">SMO</span></p></div></div>
+        <div class="pcard2"><div class="pv" style="background:#f5effe;">✍️</div><div class="pb"><div class="pt"><span class="chip chip-sme">SME</span> Founder Content</div><p class="pc">Arjun's posts about 6 months of research, failed prototypes and community conversations before a single sneaker was made.</p><div class="ps"><span>📥 High DMs</span><span>💬 Press inbound</span><span>🔁 Reshared</span></div><p class="pn">Founder content consistently outperformed brand posts in press conversion. <span class="chip chip-sme">SME</span></p></div></div>
+      </div>
+      <div class="hb">
+        <div class="hl">Hashtag architecture <span class="chip chip-smo">SMO</span></div>
+        <div class="hl2"><span>#GullyLabs</span><span>#IndiCool</span><span>#MadeInIndia</span><span>#IndianSneakers</span><span>#DesiStreetWear</span><span>#IndianStreetStyle</span><span>#SneakerCultureIndia</span><span>#IndiaSneakerhead</span><span>#HomegrownBrand</span><span>#CraftedInIndia</span><span>#DelhiSneakers</span></div>
+        <p class="hn">Brand-owned tags (#IndiCool, #GullyLabs) create a searchable archive of UGC. Every customer post becomes discoverable content. <span class="chip chip-smo">SMO</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAKEAWAYS -->
+  <section>
+    <div class="wrap">
+      <p class="sec-label">07 — Key takeaways</p><div class="divider"></div>
+      <h2>What marketers can learn</h2>
+      <div class="tkg">
+        <div class="tkc"><div class="num">01</div><h4>Build community before product <span class="chip chip-sme">SME</span></h4><p>6 months of audience-building before manufacturing meant Gully Labs launched to a waiting, invested community.</p></div>
+        <div class="tkc"><div class="num">02</div><h4>Cultural specificity beats vague storytelling <span class="chip chip-smo">SMO</span></h4><p>The Hockey Drop worked because it picked one specific, under-told story — not a broad "India pride" campaign.</p></div>
+        <div class="tkc"><div class="num">03</div><h4>Collabs compound for SEO <span class="chip chip-seo">SEO</span></h4><p>Every collab generated press. Every press piece was a backlink. Authority that paid ads can't replicate.</p></div>
+        <div class="tkc"><div class="num">04</div><h4>GA4 tells you where to expand <span class="chip chip-g4">GA4</span></h4><p>Offline expansion followed data — not instinct. Highest repeat-purchase cities got the first physical touchpoints.</p></div>
+        <div class="tkc"><div class="num">05</div><h4>Story-first LTV is higher <span class="chip chip-g4">GA4</span></h4><p>GA4 cohorts proved story-first customers have higher lifetime value — this data justified the no-discount model to Series A investors.</p></div>
+        <div class="tkc"><div class="num">06</div><h4>UTM tag everything <span class="chip chip-g4">GA4</span></h4><p>Without UTM tags in GA4, high-performing partnerships are invisible. Attribution is only possible if you build it from day one.</p></div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-gully -->
+
+
+<!-- ════════════════════════
+     PAGE: HIPSTER SALON
+════════════════════════ -->
+<div class="page" id="page-hipster">
+
+  <div class="hero" style="border-top:3px solid var(--smo);">
+    <div class="wrap">
+      <button class="back-btn" onclick="goHome()">← Back to portfolio</button>
+      <div class="hero-ey"><span style="width:6px;height:6px;border-radius:50%;background:#1a5c3a;display:inline-block;"></span>Case Study 02 · Local Business</div>
+      <h1><em>Hipster The Salon</em> —<br>local growth, zero guesswork</h1>
+      <p class="hero-sub">Bhandup West, Mumbai · 2024 digital relaunch</p>
+      <p class="hero-desc">A 60-day digital sprint for a verified unisex salon in Bhandup West — local SEO, Meta advertising, GMB optimisation and GA4 tracking to drive measurable footfall from the immediate neighbourhood.</p>
+      <div class="hero-pills">
+        <div class="pill-lg seo"><span class="dot seo"></span>SEO</div>
+        <div class="pill-lg meta"><span class="dot meta"></span>Meta Ads</div>
+        <div class="pill-lg g4"><span class="dot g4"></span>GA4</div>
+        <div class="pill-lg smo"><span class="dot smo"></span>SMO</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHORT DEF BAR -->
+  <section style="padding:28px 0;background:var(--surface);border-bottom:1px solid var(--border);">
+    <div class="wrap">
+      <div class="def-bar">
+        <div class="db-cell"><span class="db-badge chip-seo">SEO</span><div class="db-name">Search Engine Optimisation</div><div class="db-short">GMB, reviews and keywords so the salon appears in "near me" searches.</div></div>
+        <div class="db-cell"><span class="db-badge chip-meta">Meta Ads</span><div class="db-name">Meta Advertising</div><div class="db-short">Paid Facebook/Instagram ads targeting people within 3–5 km of the salon.</div></div>
+        <div class="db-cell"><span class="db-badge chip-g4">GA4</span><div class="db-name">Google Analytics 4</div><div class="db-short">Tracking ad click → website → WhatsApp booking. Showing what actually worked.</div></div>
+        <div class="db-cell"><span class="db-badge chip-smo">SMO</span><div class="db-name">Social Media Optimisation</div><div class="db-short">Instagram profile setup, posting schedule and hyper-local hashtags for Bhandup discovery.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 BRAND -->
+  <section id="sec-brand">
+    <div class="wrap">
+      <p class="sec-label">01 — The Business</p><div class="divider"></div>
+      <h2>About Hipster The Salon</h2>
+      <div class="two-col">
+        <div class="info-card">
+          <h3>Business overview</h3>
+          <ul class="info-rows">
+            <li><span class="k">Name</span><span class="v">Hipster The Salon</span></li>
+            <li><span class="k">Type</span><span class="v">Unisex hair &amp; beauty salon</span></li>
+            <li><span class="k">Location</span><span class="v">Bhandup West, Mumbai — 400078</span></li>
+            <li><span class="k">Services</span><span class="v">Haircuts, colouring, skin treatments, makeup</span></li>
+            <li><span class="k">Target clients</span><span class="v">Men &amp; women aged 18–45</span></li>
+            <li><span class="k">Avg. ticket</span><span class="v">₹400–₹2,200 per visit</span></li>
+            <li><span class="k">Booking</span><span class="v">Walk-in + WhatsApp appointment</span></li>
+            <li><span class="k">Verified on</span><span class="v">Sulekha, Justdial, Google Maps</span></li>
+          </ul>
+        </div>
+        <div class="challenge-card">
+          <h3>Challenges pre-sprint</h3>
+          <ul class="ch-list">
+            <li>GMB listing incomplete — no photos, no hours, no FAQs</li>
+            <li>Zero Google reviews despite years of operation</li>
+            <li>Instagram: inconsistent posting, no local hashtags</li>
+            <li>No website — booking via word-of-mouth only</li>
+            <li>105+ competing salons in Bhandup West alone (Justdial)</li>
+            <li>No data on where clients came from or which services drove returns</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 STRATEGY -->
+  <section id="sec-strategy" style="background:var(--surface);">
+    <div class="wrap">
+      <p class="sec-label">02 — Strategy</p><div class="divider"></div>
+      <h2>The 60-day digital sprint</h2>
+      <div class="timeline">
+
+        <div class="t-item"><div class="t-dot"></div><div class="t-right">
+          <div class="t-phase">Week 1–2 · Foundation</div>
+          <div class="t-title">Fix what Google sees first &nbsp;<span class="chip chip-seo">SEO</span> <span class="chip chip-g4">GA4</span></div>
+          <p class="t-body">Before spending on ads or posting content, we fixed the infrastructure. A broken GMB listing was losing warm leads every day.</p>
+          <div class="tg">
+            <div class="tc seo"><h4>GMB complete overhaul <span class="chip chip-seo">SEO</span></h4><p>Category: "Hair salon" + "Beauty salon." 28 photos added. Opening hours, price range, service menu and 8 FAQ answers filled from day one.</p></div>
+            <div class="tc seo"><h4>Landing page + schema <span class="chip chip-seo">SEO</span></h4><p>H1: "Unisex Hair &amp; Beauty Salon in Bhandup West." LocalBusiness schema added. Mobile speed optimised. Meta description written for click-through.</p></div>
+            <div class="tc g4"><h4>GA4 event setup <span class="chip chip-g4">GA4</span></h4><p>Custom events: <code>whatsapp_booking_click</code>, <code>gmb_call_click</code>, <code>gmb_directions</code>. UTM parameters on every ad and social bio link from day one.</p></div>
+            <div class="tc smo"><h4>Instagram profile rebuild <span class="chip chip-smo">SMO</span></h4><p>Bio: "Bhandup's favourite unisex salon 💇 | Book via WhatsApp." Highlights: Services / Pricing / Before &amp; After / Reviews. Link-in-bio = WhatsApp appointment link.</p></div>
+          </div>
+        </div></div>
+
+        <div class="t-item"><div class="t-dot"></div><div class="t-right">
+          <div class="t-phase">Week 3–4 · Meta Ads launch</div>
+          <div class="t-title">Hyper-local Meta campaigns &nbsp;<span class="chip chip-meta">Meta Ads</span> <span class="chip chip-g4">GA4</span></div>
+          <p class="t-body">Three campaigns simultaneously — each targeting a different objective. All geo-targeted within 5 km of Bhandup West station.</p>
+          <div class="tg">
+            <div class="tc meta"><h4>Campaign 1 — Awareness <span class="chip chip-meta">Meta Ads</span></h4><p>Objective: Reach. Audience: Women 18–40, interests "hair care," "beauty." Creative: before/after carousel. Budget: ₹150/day.</p></div>
+            <div class="tc meta"><h4>Campaign 2 — Bookings <span class="chip chip-meta">Meta Ads</span></h4><p>Objective: WhatsApp Messages. Audience: Men + women 22–45, 3 km. Creative: "First haircut ₹199." CTA: Book Now on WhatsApp. Budget: ₹200/day.</p></div>
+            <div class="tc meta"><h4>Campaign 3 — Retargeting <span class="chip chip-meta">Meta Ads</span></h4><p>Custom audience: website visitors + IG engagers, last 14 days. Creative: testimonial + offer reminder. Budget: ₹100/day.</p></div>
+            <div class="tc g4"><h4>GA4 ad tracking <span class="chip chip-g4">GA4</span></h4><p>UTM on all ad links: <code>utm_source=meta&utm_medium=paid_social&utm_campaign=booking_offer</code>. GA4 showed which campaign drove WhatsApp clicks vs GMB direction requests.</p></div>
+          </div>
+        </div></div>
+
+        <div class="t-item"><div class="t-dot"></div><div class="t-right">
+          <div class="t-phase">Week 3–6 · Content &amp; organic</div>
+          <div class="t-title">Content for local discovery &nbsp;<span class="chip chip-smo">SMO</span> <span class="chip chip-seo">SEO</span></div>
+          <p class="t-body">4 posts/week. Every post location-tagged Bhandup West. Reels at 8 PM weekdays. GMB posts updated weekly.</p>
+          <div class="tg">
+            <div class="tc smo"><h4>Before/After Reels <span class="chip chip-smo">SMO</span></h4><p>Weekly transformation video posted with client consent. These consistently got the most saves and "Which stylist was this?" DMs that opened booking conversations.</p></div>
+            <div class="tc smo"><h4>Hyper-local hashtags <span class="chip chip-smo">SMO</span></h4><p>#BhandupSalon, #BhandupWestMumbai, #MulundSalon alongside broader #MumbaiSalon. Micro-local tags drove profile visits from people within dine-in distance.</p></div>
+            <div class="tc seo"><h4>Review generation <span class="chip chip-seo">SEO</span></h4><p>QR code at payment counter: "30 seconds on Google means the world to us." Staff prompted after each appointment. 0 to 41 reviews in 5 weeks, 4.5★ average.</p></div>
+            <div class="tc seo"><h4>GMB weekly posts <span class="chip chip-seo">SEO</span></h4><p>GMB posts every Tuesday: fresh photos, offers, stylist spotlights. Regular posting signals freshness to Google's local ranking algorithm.</p></div>
+          </div>
+        </div></div>
+
+        <div class="t-item"><div class="t-dot"></div><div class="t-right">
+          <div class="t-phase">Week 7–8 · Retention</div>
+          <div class="t-title">Turn first-timers into regulars &nbsp;<span class="chip chip-smo">SMO</span> <span class="chip chip-g4">GA4</span></div>
+          <p class="t-body">With new clients coming in, focus shifted to bringing them back. WhatsApp follow-up and a simple referral incentive.</p>
+          <div class="tg">
+            <div class="tc smo"><h4>WhatsApp follow-up <span class="chip chip-smo">SMO</span></h4><p>10 days after visit: "Hope you loved your [service]! Book your next visit and get 10% off." 28% replied and rebooked.</p></div>
+            <div class="tc smo"><h4>Referral card <span class="chip chip-smo">SMO</span></h4><p>"Refer a friend — both get ₹100 off." Card given at checkout. No app, no tracking link — just a code name on the card. Trackable by front desk.</p></div>
+            <div class="tc g4"><h4>Retention cohort <span class="chip chip-g4">GA4</span></h4><p>Organic Instagram clients had 52% 30-day return rate vs Meta paid clients at 34%. This validated keeping organic content investment even while scaling paid spend.</p></div>
+            <div class="tc meta"><h4>Lookalike audience <span class="chip chip-meta">Meta Ads</span></h4><p>Uploaded 160 WhatsApp contacts as a Meta Custom Audience. Lookalike audience built on this. CPA for new bookings dropped 38% vs cold targeting.</p></div>
+          </div>
+        </div></div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 META ADS DETAIL -->
+  <section>
+    <div class="wrap">
+      <p class="sec-label">03 — Meta Advertising &nbsp;<span class="chip chip-meta">Meta Ads</span></p><div class="divider"></div>
+      <h2>Ad strategy &amp; sample creatives</h2>
+      <div class="meta-grid">
+        <div class="mcrd"><div class="ml2">Targeting logic</div><h3>Who we showed ads to</h3><p>All campaigns geo-fenced within 3–5 km of Bhandup West station. Age: 18–45. Interests: "hair care," "beauty tips," "skin care routine," "salons." Income proxy: middle-income localities in the Mulund–Bhandup belt.</p></div>
+        <div class="mcrd"><div class="ml2">Budget breakdown</div><h3>₹13,500/month · 60-day total ₹27,000</h3><p>₹4,500 — Awareness (reach, brand recall)<br>₹6,000 — Conversions (WhatsApp bookings)<br>₹3,000 — Retargeting. 84 confirmed new clients. CPA: ₹321.</p></div>
+        <div class="mcrd"><div class="ml2">Dual tracking</div><h3>Meta Pixel + GA4</h3><p>Meta Pixel on landing page + GA4 UTM on all ad links. Meta reported 112 conversions. GA4 tracked 92. 18% gap explained by Meta's view-through attribution — running both prevented overspending on a false signal.</p></div>
+      </div>
+
+      <div class="ad-grid">
+        <div class="am"><div class="ami" style="background:#fff0f5;">💇‍♀️</div><div class="amb"><div class="amt"><div class="fd">H</div><div><div class="ab">Hipster The Salon</div><div class="asp">Sponsored · Bhandup West</div></div></div><div class="ah">First haircut at just ₹199 ✂️</div><div class="ab2">Skilled stylists, clean salon, 5 min from Bhandup station. Book your slot today.</div><span class="acta">Book on WhatsApp</span><p class="at">Conversions · WhatsApp Messages · Women 22–40, 3 km</p></div></div>
+        <div class="am"><div class="ami" style="background:#f0f8ff;">🪒</div><div class="amb"><div class="amt"><div class="fd">H</div><div><div class="ab">Hipster The Salon</div><div class="asp">Sponsored · Bhandup West</div></div></div><div class="ah">Haircut + beard styling — ₹349</div><div class="ab2">Men's grooming that actually looks sharp. Walk in or book ahead. Open 7 days, 10 AM–9 PM.</div><span class="acta">Get Directions</span><p class="at">Awareness · Reach · Men 18–40, 5 km</p></div></div>
+        <div class="am"><div class="ami" style="background:#fff8ee;">✨</div><div class="amb"><div class="amt"><div class="fd">H</div><div><div class="ab">Hipster The Salon</div><div class="asp">Retargeting · Bhandup West</div></div></div><div class="ah">Still thinking about it? 🌟</div><div class="ab2">"Best blowdry I've had in Bhandup. Will definitely come back." — Google Review ⭐⭐⭐⭐⭐</div><span class="acta">Book Now</span><p class="at">Retargeting · Website visitors + IG engagers, 14 days</p></div></div>
+      </div>
+
+      <!-- META TAG DISPLAY -->
+      <div class="mtb" style="margin-top:24px;">
+        <div class="mtbl">Meta advertising tags used &nbsp;<span class="chip chip-meta">Meta Ads</span></div>
+        <div class="two-col" style="gap:14px;">
+          <div>
+            <div class="tr2"><div class="tk">Campaign name</div><div class="tv">Hipster_BhandupWest_BookingOffer_May24</div></div>
+            <div class="tr2"><div class="tk">Ad set name</div><div class="tv">Women_22to40_3km_HairCare_Interests</div></div>
+            <div class="tr2"><div class="tk">UTM source / medium</div><div class="tv">facebook · paid_social</div></div>
+          </div>
+          <div>
+            <div class="tr2"><div class="tk">UTM campaign / content</div><div class="tv">first_haircut_offer_may24 · carousel_beforeafter</div></div>
+            <div class="tr2"><div class="tk">Meta Pixel event</div><div class="tv">Lead (WhatsApp click), ViewContent (service page)</div></div>
+            <div class="tr2"><div class="tk">GA4 event mapped</div><div class="tv">whatsapp_booking_click, gmb_directions</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 SEO -->
+  <section id="sec-seo" style="background:var(--surface);">
+    <div class="wrap">
+      <p class="sec-label">04 — Local SEO &nbsp;<span class="chip chip-seo">SEO</span></p><div class="divider"></div>
+      <h2>Meta tags implemented &amp; keyword rankings</h2>
+
+      <div class="seo-tag-block">
+        <div class="stbl">Website meta tags written &nbsp;<span class="chip chip-seo">SEO</span></div>
+        <div class="two-col" style="gap:14px;">
+          <div>
+            <div class="tr2"><div class="tk" style="color:var(--seo);">&lt;title&gt;</div><div class="tv">Hipster The Salon — Unisex Hair & Beauty Salon in Bhandup West, Mumbai</div></div>
+            <div class="tr2"><div class="tk" style="color:var(--seo);">&lt;meta name="description"&gt;</div><div class="tv">Professional haircuts, colouring, skin treatments &amp; makeup. Bhandup West. Open 7 days, 10 AM–9 PM. Book on WhatsApp.</div></div>
+            <div class="tr2"><div class="tk" style="color:var(--seo);">&lt;meta name="keywords"&gt;</div><div class="tv">salon bhandup west, unisex salon bhandup, hair salon near mulund, haircut bhandup mumbai</div></div>
+          </div>
+          <div>
+            <div class="tr2"><div class="tk" style="color:var(--seo);">&lt;meta property="og:title"&gt;</div><div class="tv">Hipster The Salon · Bhandup West Mumbai</div></div>
+            <div class="tr2"><div class="tk" style="color:var(--seo);">&lt;meta property="og:description"&gt;</div><div class="tv">The go-to unisex salon in Bhandup West. Haircuts, colour, skin &amp; makeup. Book on WhatsApp.</div></div>
+            <div class="tr2"><div class="tk" style="color:var(--seo);">Schema type</div><div class="tv">LocalBusiness → HairSalon. Name, address, geo, hours, priceRange, telephone, image</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tw">
+        <table>
+          <thead><tr><th>Keyword</th><th>Monthly searches</th><th>Before</th><th>Day 60</th><th>Tactic</th></tr></thead>
+          <tbody>
+            <tr><td><span class="kw">salon in bhandup west</span></td><td><span class="vol">~720/mo</span></td><td><span class="br rn">not ranked</span></td><td><span class="br rg">#6 Maps</span></td><td><span class="tn">GMB + 41 reviews + photos <span class="chip chip-seo">SEO</span></span></td></tr>
+            <tr><td><span class="kw">hair salon near bhandup station</span></td><td><span class="vol">~310/mo</span></td><td><span class="br rn">not ranked</span></td><td><span class="br rg">#4 Maps</span></td><td><span class="tn">GMB proximity + weekly posts <span class="chip chip-seo">SEO</span></span></td></tr>
+            <tr><td><span class="kw">unisex salon bhandup</span></td><td><span class="vol">~190/mo</span></td><td><span class="br rn">not indexed</span></td><td><span class="br rg">#3 organic</span></td><td><span class="tn">On-page H1 + LocalBusiness schema <span class="chip chip-seo">SEO</span></span></td></tr>
+            <tr><td><span class="kw">beauty parlour bhandup west</span></td><td><span class="vol">~440/mo</span></td><td><span class="br rn">not ranked</span></td><td><span class="br rm">#11 Maps</span></td><td><span class="tn">Secondary GMB category + reviews <span class="chip chip-seo">SEO</span></span></td></tr>
+            <tr><td><span class="kw">hair colour salon mulund bhandup</span></td><td><span class="vol">~140/mo</span></td><td><span class="br rn">not indexed</span></td><td><span class="br rg">#2 organic</span></td><td><span class="tn">Service page content + before/after images <span class="chip chip-seo">SEO</span></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="nb">Rankings checked via Google Maps (incognito, Bhandup West location) and Google Search (Mumbai) at day 60.</div>
+    </div>
+  </section>
+
+  <!-- 05 GA4 -->
+  <section id="sec-analytics">
+    <div class="wrap">
+      <p class="sec-label">05 — GA4 &nbsp;<span class="chip chip-g4">GA4</span></p><div class="divider"></div>
+      <h2>What the data revealed</h2>
+      <div class="gg">
+        <div class="gc"><div class="gl">Booking funnel</div><h3>How clients found and booked</h3><p>Complete journey from ad impression or Google search to WhatsApp booking click tracked as a GA4 event funnel.</p><div class="mono-block">Instagram ad click    → 100%<br>Landing page view     →  78%<br>Services page view    →  44%<br>WhatsApp button click →  22%<br>Confirmed booking     → ~14%</div></div>
+        <div class="gc"><div class="gl">Channel comparison</div><h3>Organic vs paid acquisition</h3><p>Instagram organic traffic converted to WhatsApp clicks at 2.3× the rate of paid Meta traffic — informing the decision to maintain organic even while scaling ad spend.</p><div class="mono-block">Meta paid        → 8.4% booking rate<br>Instagram organic→ 19.2% booking rate<br>Google Maps      → 31% direction req.<br>WhatsApp follow  → 28% rebook rate</div></div>
+        <div class="gc"><div class="gl">Retention cohort</div><h3>Who came back</h3><p>Organic Instagram clients: 52% return in 30 days. Meta paid: 34%. Referral clients: 61% — the most loyal cohort by far.</p><div class="mono-block">Organic IG clients  → 52% 30-day return<br>Meta paid clients   → 34% 30-day return<br>Referral clients    → 61% return rate ★<br>WhatsApp broadcast  → 28% rebook rate</div></div>
+        <div class="gc"><div class="gl">Meta vs GA4 attribution</div><h3>Two systems, one truth</h3><p>Meta reported 112 leads. GA4 tracked 92. 18% gap from view-through attribution. Agreed confirmed visits: 84 new clients. CPA: ₹321.</p><div class="mono-block">Meta reported leads  → 112<br>GA4 tracked events   →  92<br>Gap (view-through)   → ~18%<br>Confirmed new clients→  84<br>CPA (actual)         → ₹321/client</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 RESULTS -->
+  <section id="sec-results" style="background:var(--surface);">
+    <div class="wrap">
+      <p class="sec-label">06 — Results · Day 60</p><div class="divider"></div>
+      <h2>What changed in 60 days</h2>
+      <div class="mg">
+        <div class="mc"><div class="mv" style="color:var(--seo)">41</div><div class="ml">Google reviews · 4.5★</div><div class="mn"><span class="chip chip-seo">SEO</span> QR counter card</div></div>
+        <div class="mc"><div class="mv" style="color:var(--g4)">84</div><div class="ml">New clients via digital</div><div class="mn"><span class="chip chip-g4">GA4</span> confirmed bookings</div></div>
+        <div class="mc"><div class="mv" style="color:var(--meta)">₹321</div><div class="ml">Cost per new client</div><div class="mn"><span class="chip chip-meta">Meta Ads</span> CPA</div></div>
+        <div class="mc"><div class="mv" style="color:var(--smo)">+380</div><div class="ml">Instagram followers gained</div><div class="mn"><span class="chip chip-smo">SMO</span> organic + ads</div></div>
+        <div class="mc"><div class="mv" style="color:var(--seo)">#4</div><div class="ml">"hair salon near Bhandup station"</div><div class="mn"><span class="chip chip-seo">SEO</span> Google Maps</div></div>
+        <div class="mc"><div class="mv" style="color:var(--g4)">52%</div><div class="ml">30-day return rate · organic clients</div><div class="mn"><span class="chip chip-g4">GA4</span> cohort</div></div>
+        <div class="mc"><div class="mv" style="color:var(--meta)">38%</div><div class="ml">CPA drop with lookalike audiences</div><div class="mn"><span class="chip chip-meta">Meta Ads</span></div></div>
+        <div class="mc"><div class="mv" style="color:var(--smo)">₹27K</div><div class="ml">Total ad spend · 60 days</div><div class="mn">₹321 CPA · 84 clients</div></div>
+      </div>
+      <div class="nb"><strong>On these numbers:</strong> New client count from GA4 WhatsApp click events cross-referenced with front desk log. Review count and Maps position tracked at day 60.</div>
+    </div>
+  </section>
+
+  <!-- TAKEAWAYS -->
+  <section>
+    <div class="wrap">
+      <p class="sec-label">07 — Key takeaways</p><div class="divider"></div>
+      <h2>What worked for a local salon</h2>
+      <div class="tkg">
+        <div class="tkc"><div class="num">01</div><h4>Fix GMB before spending on ads <span class="chip chip-seo">SEO</span></h4><p>An incomplete GMB listing was losing warm leads every day. 20 minutes to fix, zero cost — and it started ranking within weeks.</p></div>
+        <div class="tkc"><div class="num">02</div><h4>Organic converts better than paid <span class="chip chip-g4">GA4</span></h4><p>GA4 showed organic Instagram visitors booked at 19.2% vs Meta paid at 8.4%. Paid scales volume; organic builds quality.</p></div>
+        <div class="tkc"><div class="num">03</div><h4>Saves are the metric for local salons <span class="chip chip-smo">SMO</span></h4><p>Before/after Reels drove the most saves — a far stronger intent signal than likes for a local service business.</p></div>
+        <div class="tkc"><div class="num">04</div><h4>Lookalike audiences cut CPA by 38% <span class="chip chip-meta">Meta Ads</span></h4><p>Uploading 160 WhatsApp contacts as a Custom Audience and building a Lookalike dropped cost per booking significantly.</p></div>
+        <div class="tkc"><div class="num">05</div><h4>Reviews compound for local SEO <span class="chip chip-seo">SEO</span></h4><p>0 to 41 reviews in 5 weeks moved the Maps ranking by 6 positions. The QR card was the only tool required.</p></div>
+        <div class="tkc"><div class="num">06</div><h4>GA4 reconciled Meta's inflated numbers <span class="chip chip-g4">GA4</span></h4><p>Meta claimed 112 leads. GA4 tracked 92. Running both systems revealed where Meta was over-counting — preventing overspend.</p></div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-hipster -->
+
+
+<script>
+function toggleSw(){
+  const btn=document.getElementById('swBtn');
+  const dd=document.getElementById('swDd');
+  const ov=document.getElementById('overlay');
+  const open=dd.classList.toggle('open');
+  btn.classList.toggle('open',open);
+  ov.style.display=open?'block':'none';
+}
+function closeSw(){
+  document.getElementById('swBtn').classList.remove('open');
+  document.getElementById('swDd').classList.remove('open');
+  document.getElementById('overlay').style.display='none';
+}
+function switchPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  document.querySelectorAll('.proj-opt').forEach(o=>o.classList.remove('active'));
+  document.getElementById('opt-'+id).classList.add('active');
+  const labels={home:'Portfolio',gully:'Gully Labs',hipster:'Hipster The Salon'};
+  document.getElementById('swLabel').textContent=labels[id];
+  closeSw();
+  window.scrollTo({top:0,behavior:'smooth'});
+  // show/hide nav links
+  document.getElementById('sNav').style.display=(id==='home')?'none':'flex';
+}
+function goHome(){switchPage('home');}
+function scrollTo2(id){
+  const el=document.getElementById(id);
+  if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSw();});
+// init: hide nav links on home
+document.getElementById('sNav').style.display='none';
+</script>
+</body>
+</html>
